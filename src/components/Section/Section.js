@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import Styles from './Section.module.css';
 import slideTransition from '../../Transitions/slideTransition.module.css';
 
-const Section = ({ title = '', isActive, children }) => {
+const Section = ({ title = '', isActive = false, children }) => {
   return (
     <CSSTransition
       in={isActive}
@@ -23,6 +23,7 @@ const Section = ({ title = '', isActive, children }) => {
 
 Section.propTypes = {
   title: PropTypes.string,
+  isActive: PropTypes.bool,
 };
 
 export default Section;

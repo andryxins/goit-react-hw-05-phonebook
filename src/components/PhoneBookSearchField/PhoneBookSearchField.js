@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import apearTransition from '../../Transitions/apearTransition.module.css';
 import Styles from './PhoneBookSearchField.module.css';
 
-const PhoneBookSearchField = ({ value, onChange, isActive }) => (
+const PhoneBookSearchField = ({ value, onChange, isActive = false }) => (
   <CSSTransition
     in={isActive}
     mountOnEnter
@@ -28,6 +28,7 @@ const PhoneBookSearchField = ({ value, onChange, isActive }) => (
 PhoneBookSearchField.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  isActive: PropTypes.bool,
 };
 
 export default PhoneBookSearchField;
